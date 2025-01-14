@@ -7,7 +7,7 @@ class LongText extends Text
     /**
      * @throws InvalidTypeException
      */
-    private function __construct(string $value)
+    protected function __construct(string $value)
     {
         if (!self::isValid($value, $errors)) {
             throw new InvalidTypeException(

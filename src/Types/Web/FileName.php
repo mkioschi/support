@@ -10,7 +10,7 @@ class FileName extends Text
     /**
      * @throws InvalidTypeException
      */
-    private function __construct(string $value)
+    protected function __construct(string $value)
     {
         if (strlen($value) > 255) {
             throw new InvalidTypeException('File name is too long. Maximum 255 characters allowed.');
