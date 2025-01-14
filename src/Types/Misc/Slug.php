@@ -8,7 +8,6 @@ use Mkioschi\Support\Types\Text;
 
 class Slug extends Text
 {
-
     /**
      * @throws InvalidTypeException
      */
