@@ -9,7 +9,7 @@ use Mkioschi\Support\Types\Text;
 class FileName extends Text
 {
     public ?FileExtension $extension{
-        get => FileExtension::tryFrom(strrchr($this->value, '.'));
+        get => FileExtension::tryParse(strrchr($this->value, '.'));
     }
     /**
      * @throws InvalidTypeException
