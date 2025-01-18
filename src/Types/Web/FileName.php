@@ -2,11 +2,15 @@
 
 namespace Mkioschi\Support\Types\Web;
 
+use Mkioschi\Support\Enums\FileExtension;
 use Mkioschi\Support\Types\InvalidTypeException;
 use Mkioschi\Support\Types\Text;
 
 class FileName extends Text
 {
+    public ?FileExtension $extension{
+        get => FileExtension::tryFrom(strrchr($this->value, '.'));
+    }
     /**
      * @throws InvalidTypeException
      */
